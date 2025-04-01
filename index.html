@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Физика</title>
+      <style>
+            body {
+                  font-family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 20px;
+                  background-color: #f4f4f4;
+            }
+
+            .accordion {
+                  background-color: white;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  margin-bottom: 10px;
+            }
+
+            .accordion-button {
+                  background-color: #007BFF;
+                  color: white;
+                  cursor: pointer;
+                  padding: 15px;
+                  border: none;
+                  text-align: left;
+                  outline: none;
+                  font-size: 16px;
+                  width: 100%;
+                  border-radius: 5px;
+            }
+
+            .accordion-content {
+                  padding: 15px;
+                  display: none;
+                  overflow: hidden;
+                  background-color: #f9f9f9;
+            }
+
+            nav {
+                  display: flex;
+                  justify-content: center;
+                  background-color: #333;
+            }
+
+            nav a {
+                  color: white;
+                  padding: 14px 20px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: center;
+            }
+
+            nav a:hover {
+                  background-color: #4CAF50;
+            }
+
+            .container {
+                  padding: 20px;
+                  max-width: 1000px;
+                  margin: auto;
+            }
+
+            h2 {
+                  color: #4CAF50;
+            }
+
+            .hidden {
+                  display: none;
+            }
+
+            nav {
+                  display: flex;
+                  justify-content: flex-start;
+                  background-color: #333;
+                  overflow-x: auto;
+                  white-space: nowrap;
+                  -webkit-overflow-scrolling: touch;
+                  /* Плавная прокрутка на iOS */
+            }
+
+            nav a {
+                  color: white;
+                  padding: 14px 20px;
+                  text-decoration: none;
+                  display: block;
+                  flex-shrink: 0;
+                  /* Предотвращает сжатие элементов */
+            }
+
+            nav a:hover {
+                  background-color: #4CAF50;
+            }
+      </style>
+
+
+      <script>
+            MathJax = {
+                  tex: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']]
+                  },
+                  svg: {
+                        fontCache: 'global'
+                  }
+            };
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+      <nav>
+            <a href="#section1" onclick="showSection('section1')">1. Кинематика</a>
+            <a href="#section2" onclick="showSection('section2')">2. Динамика</a>
+            <a href="#section3" onclick="showSection('section3')">3. Статика</a>
+            <a href="#section4" onclick="showSection('section4')">4. Термодинамика</a>
+            <a href="#section5" onclick="showSection('section5')">5. Тепловые процессы</a>
+            <a href="#section6" onclick="showSection('section6')">6. Электростатика</a>
+            <a href="#section7" onclick="showSection('section7')">7. Электродинамика</a>
+            <a href="#section8" onclick="showSection('section8')">8. Магнетизм</a>
+            <a href="#section9" onclick="showSection('section9')">9. Оптика</a>
+            <a href="#section10" onclick="showSection('section10')">10. Ядерные процессы</a>
+
+
+      </nav>
+
+
+
+      <div class="container">
+
+
+            <div id="section1">
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">1. Формулы для пути, скорости,
+                              времени и координаты при равномерном движении</button>
+                        <div class="accordion-content">
+                              <p>Скорость (v): v = s / t, где s — путь, t — время.</p>
+                              <p>Путь (s): s = v * t.</p>
+                              <p>Время (t): t = s / v.</p>
+                              <p>Координата (x): x = x<sub>0</sub> + vt, где x<sub>0</sub> — начальная координата.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">2. Графики пути, скорости,
+                              координаты и ускорения при равномерном движении</button>
+                        <div class="accordion-content">
+                              <p>График пути (s) — прямая линия, наклон которой соответствует скорости.</p>
+                              <p>График скорости (v) — горизонтальная прямая, так как скорость постоянна.</p>
+                              <p>График координаты (x) — прямая линия, аналогичная графику пути.</p>
+                              <p>График ускорения (a) — горизонтальная прямая на уровне 0, так как ускорение
+                                    отсутствует.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">3. Равноускоренное
+                              движение</button>
+                        <div class="accordion-content">
+                              <p>Равноускоренное движение — это движение, при котором скорость тела изменяется
+                                    равномерно, то есть ускорение остается постоянным.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">4. Формулы для скорости, пути и
+                              ускорения при равноускоренном движении</button>
+                        <div class="accordion-content">
+                              <p>Скорость (v): v = v<sub>0</sub> + at, где v<sub>0</sub> — начальная скорость, a —
+                                    ускорение.</p>
+                              <p>Путь (s): s = v<sub>0</sub>t + 1/2 a t<sup>2</sup>.</p>
+                              <p>Ускорение (a): a = (v - v<sub>0</sub>) / t.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">5. Измерения в СИ</button>
+                        <div class="accordion-content">
+                              <p>Скорость: м/с</p>
+                              <p>Путь: м</p>
+                              <p>Ускорение: м/с²</p>
+                              <p>Время: с</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">6. Перевод км/ч в м/с</button>
+                        <div class="accordion-content">
+                              <p>Чтобы перевести км/ч в м/с, нужно разделить значение на 3.6: м/с = км/ч / 3.6</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">7. Отличие пути от
+                              перемещения</button>
+                        <div class="accordion-content">
+                              <p>Путь — это длина траектории, пройденной телом.</p>
+                              <p>Перемещение — это векторная величина, равная разности конечной и начальной координат.
+                              </p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">8. Угловая скорость</button>
+                        <div class="accordion-content">
+                              <p>Угловая скорость — это скорость изменения угла поворота тела. Обозначается (ω).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">9. Измерение угловой
+                              скорости</button>
+                        <div class="accordion-content">
+                              <p>Угловая скорость измеряется в радианах в секунду (рад/с).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">10. Формулы для угловой
+                              скорости</button>
+                        <div class="accordion-content">
+                              <p>ω = Δφ / Δt, где Δφ — изменение угла, Δt — время.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">11. Частота обращения</button>
+                        <div class="accordion-content">
+                              <p>Частота обращения — это количество полных оборотов, совершаемых телом за единицу
+                                    времени. Обозначается (f).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">12. Период обращения</button>
+                        <div class="accordion-content">
+                              <p>Период обращения — это время, необходимое для совершения одного полного оборота.
+                                    Обозначается (T).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">13. Формулы для периода,
+                              частоты, линейной скорости, центростремительного ускорения</button>
+                        <div class="accordion-content">
+                              <p>Частота: f = 1 / T</p>
+                              <p>Период: T = 1 / f</p>
+                              <p>Линейная скорость: v = ωr</p>
+                              <p>Центростремительное ускорение: a<sub>c</sub> = v² / r = ω²r</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">14. Единицы измерения</button>
+                        <div class="accordion-content">
+                              <p>Период (T): с</p>
+                              <p>Частота (f): Гц</p>
+                              <p>Линейная скорость (v): м/с</p>
+                              <p>Центростремительное ускорение (a<sub>c</sub>): м/с²</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">15. Механическое
+                              колебание</button>
+                        <div class="accordion-content">
+                              <p>Механическое колебание — это движение тела, которое периодически повторяется.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">16. Определение амплитуды,
+                              периода, частоты колебаний по графику x(t)</button>
+                        <div class="accordion-content">
+                              <p>Амплитуда — это максимальное отклонение от равновесного положения.</p>
+                              <p>Период (T) — это время, за которое происходит одно полное колебание.</p>
+                              <p>Частота (f) — это количество колебаний в единицу времени, f = 1 / T.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">17. Единицы измерения
+                              колебаний</button>
+                        <div class="accordion-content">
+                              <p>Период (T): с</p>
+                              <p>Частота (f): Гц</p>
+                              <p>Амплитуда: м</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">18. Виды колебаний</button>
+                        <div class="accordion-content">
+                              <p>Сложные колебания: возникают при наложении нескольких простых колебаний.</p>
+                              <p>Простые колебания: происходят в одном направлении, например, колебания маятника.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">19. Математический
+                              маятник</button>
+                        <div class="accordion-content">
+                              <p>Математический маятник — это идеализированная модель, представляющая собой точечное
+                                    тело, подвешенное на нерастяжимой нити. Формула для периода: T = 2π√(L/g), где L —
+                                    длина нити, g — ускорение свободного падения.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">20. Пружинный маятник</button>
+                        <div class="accordion-content">
+                              <p>Пружинный маятник — это система, состоящая из пружины и груза, которая колеблется под
+                                    действием силы упругости. Формула для периода: T = 2π√(m/k), где m — масса груза, k
+                                    — жесткость пружины.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">21. Превращение энергии в
+                              маятниках</button>
+                        <div class="accordion-content">
+                              <p>В маятниках происходит преобразование потенциальной энергии в кинетическую и обратно.
+                                    На высоте максимального отклонения потенциальная энергия максимальна, а кинетическая
+                                    — минимальна, и наоборот в нижней точке.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">22. Механическая волна</button>
+                        <div class="accordion-content">
+                              <p>Механическая волна — это возмущение, которое распространяется в среде (например, в
+                                    воздухе или воде) и переносит энергию.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">23. Формула для длины
+                              волны</button>
+                        <div class="accordion-content">
+                              <p>Длина волны (λ) определяется как: λ = v / f, где v — скорость волны, f — частота.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">24. Единица измерения длины
+                              волны</button>
+                        <div class="accordion-content">
+                              <p>Длина волны измеряется в метрах (м).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">25. Виды волн</button>
+                        <div class="accordion-content">
+                              <p>Продольные волны: частицы среды колеблются вдоль направления распространения волны
+                                    (например, звуковые волны).</p>
+                              <p>Поперечные волны: частицы колеблются перпендикулярно направлению распространения волны
+                                    (например, волны на поверхности воды).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">26. Особенности звуковой
+                              волны</button>
+                        <div class="accordion-content">
+                              <p>Звуковая волна — это продольная механическая волна, которая требует среды для
+                                    распространения. Она характеризуется частотой, амплитудой и длиной волны. Звук
+                                    распространяется быстрее в твердых телах, чем в газах.</p>
+                        </div>
+                  </div>
+
+            </div>
+
+      </div>
+
+
+
+
+      <script>
+            function toggleAccordion(button) {
+                  // Закрыть все открытые аккордеоны
+                  const contents = document.querySelectorAll('.accordion-content');
+                  contents.forEach(content => {
+                        content.style.display = 'none';
+                  });
+                  // Открыть или закрыть текущий аккордеон
+                  const content = button.nextElementSibling;
+                  if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                  } else {
+                        content.style.display = 'block';
+                  }
+            }
+      </script>
+
+      <script>
+            function showSection(sectionId) {
+                  const sections = document.querySelectorAll('.container > div');
+                  sections.forEach(section => {
+                        section.classList.add('hidden');
+                  });
+                  document.getElementById(sectionId).classList.remove('hidden');
+            }
+      </script>
+
+</body>
+
+</html>
