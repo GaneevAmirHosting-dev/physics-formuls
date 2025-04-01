@@ -88,12 +88,34 @@
                   text-decoration: none;
                   display: block;
                   flex-shrink: 0;
-                  /* Предотвращает сжатие элементов */
             }
 
             nav a:hover {
                   background-color: #4CAF50;
             }
+            .image-gallery {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.gallery-image {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s; 
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); 
+}
       </style>
 
 
@@ -379,330 +401,1348 @@
 
             <div id="section2">
                   <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">1. Первый закон Ньютона</button>
-                      <div class="accordion-content">
-                          <p>Первый закон Ньютона гласит, что тело остается в состоянии покоя или равномерного прямолинейного движения, пока на него не подействует внешняя сила.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">2. Сила – это</button>
-                      <div class="accordion-content">
-                          <p>Сила – это векторная величина, которая характеризует взаимодействие между телами и вызывает изменение их движения.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">3. Равнодействующей всех сил называют?</button>
-                      <div class="accordion-content">
-                          <p>Равнодействующей всех сил называют векторную сумму всех сил, действующих на тело.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">4. Формулы всех сил (см. таблицу 6)</button>
-                      <div class="accordion-content">
-                          <p>Формулы всех сил зависят от конкретного типа силы (например, сила тяжести, сила трения и т.д.).</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">5. Второй закон Ньютона определение и формула</button>
-                      <div class="accordion-content">
-                          <p>Второй закон Ньютона утверждает, что ускорение тела пропорционально действующей на него силе и обратно пропорционально его массе. Формула: F = ma, где F — сила, m — масса, a — ускорение.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">6. Третий закон Ньютона</button>
-                      <div class="accordion-content">
-                          <p>Третий закон Ньютона гласит, что на каждое действие есть равное и противоположное противодействие.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">7. Куда направлена равнодействующая всех сил при движении по окружности?</button>
-                      <div class="accordion-content">
-                          <p>Равнодействующая всех сил при движении по окружности направлена к центру окружности.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">8. Импульс – это</button>
-                      <div class="accordion-content">
-                          <p>Импульс – это векторная величина, равная произведению массы тела на его скорость. Формула: p = mv, где p — импульс, m — масса, v — скорость.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">9. Второй закон Ньютона в импульсной форме</button>
-                      <div class="accordion-content">
-                          <p>Второй закон Ньютона в импульсной форме гласит, что изменение импульса тела пропорционально действующей на него силе и времени, в течение которого эта сила действует. Формула: F = Δp/Δt.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">10. Единицы измерения импульса</button>
-                      <div class="accordion-content">
-                          <p>Единицей измерения импульса в системе СИ является килограмм-метр в секунду (кг·м/с).</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">11. Закон сохранения импульса (формула и формулировка)</button>
-                      <div class="accordion-content">
-                          <p>Закон сохранения импульса утверждает, что в замкнутой системе сумма импульсов всех тел остается постоянной, если на систему не действуют внешние силы. Формула: p<sub>1</sub> + p<sub>2</sub> = const.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">12. Механическая работа – это (+ единицы измерения, обозначение, формула)</button>
-                      <div class="accordion-content">
-                          <p>Механическая работа – это скалярная величина, равная произведению силы на путь, пройденный телом в направлении силы. Формула: A = F * s * cos(α), где A — работа, F — сила, s — путь, α — угол между силой и направлением движения. Единица измерения: Джоуль (Дж).</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">13. Механическая энергия – это (+ формула, единицы измерения)</button>
-                      <div class="accordion-content">
-                          <p>Механическая энергия – это сумма кинетической и потенциальной энергии. Формула: E<sub>m</sub> = E<sub>k</sub> + E<sub>p</sub>. Единица измерения: Джоуль (Дж).</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">14. Закон сохранения энергии</button>
-                      <div class="accordion-content">
-                          <p>Закон сохранения энергии утверждает, что энергия не может быть создана или уничтожена, она может только переходить из одной формы в другую.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">15. Формулы для кинетической и потенциальной энергии</button>
-                      <div class="accordion-content">
-                          <p>Кинетическая энергия: E<sub>k</sub> = 1/2 mv², где m — масса, v — скорость. Потенциальная энергия: E<sub>p</sub> = mgh, где m — масса, g — ускорение свободного падения, h — высота.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">16. Кинетическая энергия – это</button>
-                      <div class="accordion-content">
-                          <p>Кинетическая энергия – это энергия, которую имеет тело в результате своего движения.</p>
-                          <p>определяется как: \( E_k = \frac{1}{2} mv^2 \), где \( m \) — масса, \( v \) — скорость.</p>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">1. Первый закон
+                              Ньютона</button>
+                        <div class="accordion-content">
+                              <p>Первый закон Ньютона гласит, что тело остается в состоянии покоя или равномерного
+                                    прямолинейного движения, пока на него не подействует внешняя сила.</p>
                         </div>
                   </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">17. Потенциальная энергия – это</button>
-                      <div class="accordion-content">
-                          <p>Потенциальная энергия – это энергия, которую имеет тело в результате своего положения или состояния.</p>
-                          <p>определяется как: \( E_p = mgh \), где \( m \) — масса, \( g \) — ускорение свободного падения, \( h \) — высота.</p>
-                        </div>
-                  </div>
-              </div>
 
-              <div id="section3" class="hidden">
                   <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">1. Статика – это</button>
-                      <div class="accordion-content">
-                          <p>Статика – это раздел механики, изучающий условия равновесия тел, находящихся в покое или движущихся равномерно и прямолинейно.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">2. Плечо силы – это</button>
-                      <div class="accordion-content">
-                          <p>Плечо силы – это перпендикулярное расстояние от линии действия силы до оси вращения.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">3. Момент силы – это</button>
-                      <div class="accordion-content">
-                          <p>Момент силы (M) – это величина, характеризующая вращательное действие силы относительно оси вращения. Формула: \( M = F \cdot d \), где \( F \) — сила, \( d \) — плечо силы.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">4. В чем измеряется момент силы в СИ</button>
-                      <div class="accordion-content">
-                          <p>Момент силы измеряется в Н·м (ньютон-метр).</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">5. Правило моментов (условия равновесия рычага)</button>
-                      <div class="accordion-content">
-                          <p>Для равновесия рычага сумма моментов сил, действующих на одну сторону от оси вращения, должна быть равна сумме моментов сил, действующих на другую сторону.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">6. Простые механизмы – это</button>
-                      <div class="accordion-content">
-                          <p>Простые механизмы – это устройства, которые используют механические преимущества для изменения направления или величины силы.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">7. Виды простых механизмов</button>
-                      <div class="accordion-content">
-                          <p>К простым механизмам относятся: рычаги, блоки, наклонные плоскости, колеса и оси, винты и т.д.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">8. Какой блок дает выигрыш в силе? Во сколько раз?</button>
-                      <div class="accordion-content">
-                          <p>Блок, который имеет несколько нитей, дает выигрыш в силе. Выигрыш в силе равен количеству нитей, поддерживающих груз.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">9. Золотое правило механики</button>
-                      <div class="accordion-content">
-                          <p>Золотое правило механики гласит, что работа, совершаемая при использовании механизма, равна работе, совершаемой против внешних сил.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">10. Давление – это</button>
-                      <div class="accordion-content">
-                          <p>Давление (P) – это сила, действующая на единицу площади. Формула: \( P = \frac{F}{S} \), где \( F \) — сила, \( S \) — площадь.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">11. Формула для давления в твердых телах</button>
-                      <div class="accordion-content">
-                          <p>Давление в твердых телах определяется по формуле: \( P = \frac{F}{ S} \), где \( F \) — сила, действующая на поверхность, а \( S \) — площадь этой поверхности.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">12. Единицы измерения давления</button>
-                      <div class="accordion-content">
-                          <p>Давление измеряется в паскалях (Па) в системе СИ, где 1 Па = 1 Н/м².</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">13. Сила давления – это</button>
-                      <div class="accordion-content">
-                          <p>Сила давления – это сила, с которой тело воздействует на поверхность, на которой оно находится.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">14. Как увеличить давление на землю человеку ровно в два раза?</button>
-                      <div class="accordion-content">
-                          <p>Чтобы увеличить давление на землю в два раза, человеку нужно уменьшить площадь опоры в два раза, сохраняя ту же силу.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">15. Почему при спасении людей на льду надо двигаться лёжа?</button>
-                      <div class="accordion-content">
-                          <p>При движении лёжа площадь опоры увеличивается, что снижает давление на лёд и уменьшает риск проваливания.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">16. Атмосферное давление – это</button>
-                      <div class="accordion-content">
-                          <p>Атмосферное давление – это давление, оказываемое атмосферой на поверхность Земли, в среднем равное 101325 Па на уровне моря.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">17. Закон Паскаля</button>
-                      <div class="accordion-content">
-                          <p>Закон Паскаля утверждает, что изменение давления в замкнутой жидкости передается во всех направлениях равномерно.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">18. Формула для давления в жидкостях и газах</button>
-                      <div class="accordion-content">
-                          <p>Давление в жидкостях и газах определяется по формуле: \( P = \rho \cdot g \cdot h \), где \( \rho \) — плотность жидкости, \( g \) — ускорение свободного падения, \( h \) — высота столба жидкости.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">19. Сообщающиеся сосуды – это</button>
-                      <div class="accordion-content">
-                          <p>Сообщающиеся сосуды – это сосуды, соединенные между собой, в которых уровень жидкости устанавливается на одном уровне при равновесии.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">20. Гидравлический пресс – это</button>
-                      <div class="accordion-content">
-                          <p>Гидравлический пресс – это устройство, использующее закон Паскаля для увеличения силы, применяемой к жидкости, для выполнения работы.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">21. Формула для гидравлического пресса</button>
-                      <div class="accordion-content">
-                          <p>Формула для гидравлического пресса: \( F_1 \cdot A_1 = F_2 \cdot A_2 \), где \( F_1 \) и \( F_2 \) — силы, \( A_1 \) и \( A_2 \) — площади поршней.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                      <button class="accordion-button" onclick="toggleAccordion(this)">22. Прибор для измерения давления</button>
-                      <div class="accordion-content">
-                          <p>Прибор для измерения давления называется манометром.</p>
-                      </div>
-                  </div>
-              
-                  <div class="accordion">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">23. Сила Архимеда – это</button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">2. Сила – это</button>
                         <div class="accordion-content">
-                            <p>Сила Архимеда – это подъемная сила, действующая на тело, погруженное в жидкость или газ, направленная вверх и равная весу вытесненной телом жидкости или газа.</p>
+                              <p>Сила – это векторная величина, которая характеризует взаимодействие между телами и
+                                    вызывает изменение их движения.</p>
                         </div>
-                    </div>
-                
-                    <div class="accordion">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">24. Формула для силы Архимеда</button>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">3. Равнодействующей всех сил
+                              называют?</button>
                         <div class="accordion-content">
-                            <p>Формула для силы Архимеда (F<sub>A</sub>): \( F_A = \rho \cdot g \cdot V \), где \( \rho \) — плотность жидкости, \( g \) — ускорение свободного падения, \( V \) — объем вытесненной жидкости.</p>
+                              <p>Равнодействующей всех сил называют векторную сумму всех сил, действующих на тело.</p>
                         </div>
-                    </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">4. Формулы всех сил (см.
+                              таблицу 6)</button>
+                        <div class="accordion-content">
+                              <p>Формулы всех сил зависят от конкретного типа силы (например, сила тяжести, сила трения
+                                    и т.д.).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">5. Второй закон Ньютона
+                              определение и формула</button>
+                        <div class="accordion-content">
+                              <p>Второй закон Ньютона утверждает, что ускорение тела пропорционально действующей на него
+                                    силе и обратно пропорционально его массе. Формула: F = ma, где F — сила, m — масса,
+                                    a — ускорение.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">6. Третий закон
+                              Ньютона</button>
+                        <div class="accordion-content">
+                              <p>Третий закон Ньютона гласит, что на каждое действие есть равное и противоположное
+                                    противодействие.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">7. Куда направлена
+                              равнодействующая всех сил при движении по окружности?</button>
+                        <div class="accordion-content">
+                              <p>Равнодействующая всех сил при движении по окружности направлена к центру окружности.
+                              </p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">8. Импульс – это</button>
+                        <div class="accordion-content">
+                              <p>Импульс – это векторная величина, равная произведению массы тела на его скорость.
+                                    Формула: p = mv, где p — импульс, m — масса, v — скорость.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">9. Второй закон Ньютона в
+                              импульсной форме</button>
+                        <div class="accordion-content">
+                              <p>Второй закон Ньютона в импульсной форме гласит, что изменение импульса тела
+                                    пропорционально действующей на него силе и времени, в течение которого эта сила
+                                    действует. Формула: F = Δp/Δt.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">10. Единицы измерения
+                              импульса</button>
+                        <div class="accordion-content">
+                              <p>Единицей измерения импульса в системе СИ является килограмм-метр в секунду (кг·м/с).
+                              </p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">11. Закон сохранения импульса
+                              (формула и формулировка)</button>
+                        <div class="accordion-content">
+                              <p>Закон сохранения импульса утверждает, что в замкнутой системе сумма импульсов всех тел
+                                    остается постоянной, если на систему не действуют внешние силы. Формула:
+                                    p<sub>1</sub> + p<sub>2</sub> = const.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">12. Механическая работа – это
+                              (+ единицы измерения, обозначение, формула)</button>
+                        <div class="accordion-content">
+                              <p>Механическая работа – это скалярная величина, равная произведению силы на путь,
+                                    пройденный телом в направлении силы. Формула: A = F * s * cos(α), где A — работа, F
+                                    — сила, s — путь, α — угол между силой и направлением движения. Единица измерения:
+                                    Джоуль (Дж).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">13. Механическая энергия – это
+                              (+ формула, единицы измерения)</button>
+                        <div class="accordion-content">
+                              <p>Механическая энергия – это сумма кинетической и потенциальной энергии. Формула:
+                                    E<sub>m</sub> = E<sub>k</sub> + E<sub>p</sub>. Единица измерения: Джоуль (Дж).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">14. Закон сохранения
+                              энергии</button>
+                        <div class="accordion-content">
+                              <p>Закон сохранения энергии утверждает, что энергия не может быть создана или уничтожена,
+                                    она может только переходить из одной формы в другую.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">15. Формулы для кинетической и
+                              потенциальной энергии</button>
+                        <div class="accordion-content">
+                              <p>Кинетическая энергия: E<sub>k</sub> = 1/2 mv², где m — масса, v — скорость.
+                                    Потенциальная энергия: E<sub>p</sub> = mgh, где m — масса, g — ускорение свободного
+                                    падения, h — высота.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">16. Кинетическая энергия –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Кинетическая энергия – это энергия, которую имеет тело в результате своего движения.
+                              </p>
+                              <p>определяется как: \( E_k = \frac{1}{2} mv^2 \), где \( m \) — масса, \( v \) —
+                                    скорость.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">17. Потенциальная энергия –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Потенциальная энергия – это энергия, которую имеет тело в результате своего положения
+                                    или состояния.</p>
+                              <p>определяется как: \( E_p = mgh \), где \( m \) — масса, \( g \) — ускорение свободного
+                                    падения, \( h \) — высота.</p>
+                        </div>
+                  </div>
+            </div>
+
+            <div id="section3" class="hidden">
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">1. Статика – это</button>
+                        <div class="accordion-content">
+                              <p>Статика – это раздел механики, изучающий условия равновесия тел, находящихся в покое
+                                    или движущихся равномерно и прямолинейно.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">2. Плечо силы – это</button>
+                        <div class="accordion-content">
+                              <p>Плечо силы – это перпендикулярное расстояние от линии действия силы до оси вращения.
+                              </p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">3. Момент силы – это</button>
+                        <div class="accordion-content">
+                              <p>Момент силы (M) – это величина, характеризующая вращательное действие силы относительно
+                                    оси вращения. Формула: \( M = F \cdot d \), где \( F \) — сила, \( d \) — плечо
+                                    силы.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">4. В чем измеряется момент силы
+                              в СИ</button>
+                        <div class="accordion-content">
+                              <p>Момент силы измеряется в Н·м (ньютон-метр).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">5. Правило моментов (условия
+                              равновесия рычага)</button>
+                        <div class="accordion-content">
+                              <p>Для равновесия рычага сумма моментов сил, действующих на одну сторону от оси вращения,
+                                    должна быть равна сумме моментов сил, действующих на другую сторону.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">6. Простые механизмы –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Простые механизмы – это устройства, которые используют механические преимущества для
+                                    изменения направления или величины силы.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">7. Виды простых
+                              механизмов</button>
+                        <div class="accordion-content">
+                              <p>К простым механизмам относятся: рычаги, блоки, наклонные плоскости, колеса и оси, винты
+                                    и т.д.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">8. Какой блок дает выигрыш в
+                              силе? Во сколько раз?</button>
+                        <div class="accordion-content">
+                              <p>Блок, который имеет несколько нитей, дает выигрыш в силе. Выигрыш в силе равен
+                                    количеству нитей, поддерживающих груз.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">9. Золотое правило
+                              механики</button>
+                        <div class="accordion-content">
+                              <p>Золотое правило механики гласит, что работа, совершаемая при использовании механизма,
+                                    равна работе, совершаемой против внешних сил.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">10. Давление – это</button>
+                        <div class="accordion-content">
+                              <p>Давление (P) – это сила, действующая на единицу площади. Формула: \( P = \frac{F}{S}
+                                    \), где \( F \) — сила, \( S \) — площадь.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">11. Формула для давления в
+                              твердых телах</button>
+                        <div class="accordion-content">
+                              <p>Давление в твердых телах определяется по формуле: \( P = \frac{F}{ S} \), где \( F \) —
+                                    сила, действующая на поверхность, а \( S \) — площадь этой поверхности.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">12. Единицы измерения
+                              давления</button>
+                        <div class="accordion-content">
+                              <p>Давление измеряется в паскалях (Па) в системе СИ, где 1 Па = 1 Н/м².</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">13. Сила давления –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Сила давления – это сила, с которой тело воздействует на поверхность, на которой оно
+                                    находится.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">14. Как увеличить давление на
+                              землю человеку ровно в два раза?</button>
+                        <div class="accordion-content">
+                              <p>Чтобы увеличить давление на землю в два раза, человеку нужно уменьшить площадь опоры в
+                                    два раза, сохраняя ту же силу.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">15. Почему при спасении людей
+                              на льду надо двигаться лёжа?</button>
+                        <div class="accordion-content">
+                              <p>При движении лёжа площадь опоры увеличивается, что снижает давление на лёд и уменьшает
+                                    риск проваливания.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">16. Атмосферное давление –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Атмосферное давление – это давление, оказываемое атмосферой на поверхность Земли, в
+                                    среднем равное 101325 Па на уровне моря.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">17. Закон Паскаля</button>
+                        <div class="accordion-content">
+                              <p>Закон Паскаля утверждает, что изменение давления в замкнутой жидкости передается во
+                                    всех направлениях равномерно.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">18. Формула для давления в
+                              жидкостях и газах</button>
+                        <div class="accordion-content">
+                              <p>Давление в жидкостях и газах определяется по формуле: \( P = \rho \cdot g \cdot h \),
+                                    где \( \rho \) — плотность жидкости, \( g \) — ускорение свободного падения, \( h \)
+                                    — высота столба жидкости.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">19. Сообщающиеся сосуды –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Сообщающиеся сосуды – это сосуды, соединенные между собой, в которых уровень жидкости
+                                    устанавливается на одном уровне при равновесии.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">20. Гидравлический пресс –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Гидравлический пресс – это устройство, использующее закон Паскаля для увеличения силы,
+                                    применяемой к жидкости, для выполнения работы.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">21. Формула для гидравлического
+                              пресса</button>
+                        <div class="accordion-content">
+                              <p>Формула для гидравлического пресса: \( F_1 \cdot A_1 = F_2 \cdot A_2 \), где \( F_1 \)
+                                    и \( F_2 \) — силы, \( A_1 \) и \( A_2 \) — площади поршней.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">22. Прибор для измерения
+                              давления</button>
+                        <div class="accordion-content">
+                              <p>Прибор для измерения давления называется манометром.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">23. Сила Архимеда –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Сила Архимеда – это подъемная сила, действующая на тело, погруженное в жидкость или
+                                    газ, направленная вверх и равная весу вытесненной телом жидкости или газа.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">24. Формула для силы
+                              Архимеда</button>
+                        <div class="accordion-content">
+                              <p>Формула для силы Архимеда (F<sub>A</sub>): \( F_A = \rho \cdot g \cdot V \), где \(
+                                    \rho \) — плотность жидкости, \( g \) — ускорение свободного падения, \( V \) —
+                                    объем вытесненной жидкости.</p>
+                        </div>
+                  </div>
+            </div>
+
+
+
+
+
+            <div id="section4" class="hidden">
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">1. Атом – это</button>
+                        <div class="accordion-content">
+                              <p>Атом – это наименьшая частица химического элемента, сохраняющая его свойства. Атом
+                                    состоит из ядра и электронов, вращающихся вокруг него.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">2. Молекула – это</button>
+                        <div class="accordion-content">
+                              <p>Молекула – это группа атомов, связанных между собой химическими связями. Молекулы могут
+                                    состоять из одного или нескольких типов атомов.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">3. Модель атома
+                              Томсона</button>
+                        <div class="accordion-content">
+                              <p>Модель атома Томсона, также известная как "пудинг с изюмом", описывает атом как
+                                    положительно заряженную массу, в которой равномерно распределены отрицательные
+                                    электроны.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">4. Модель атома
+                              Резерфорда</button>
+                        <div class="accordion-content">
+                              <p>Модель атома Резерфорда описывает атом как состоящий из ядра, содержащего положительно
+                                    заряженные протоны и нейтроны, вокруг которого вращаются электроны.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">5. Броуновское движение –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Броуновское движение – это случайное движение микроскопических частиц, взвешенных в
+                                    жидкости или газе, вызванное столкновениями с молекулами среды.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">6. Диффузия – это</button>
+                        <div class="accordion-content">
+                              <p>Диффузия – это процесс равномерного распределения частиц в пространстве, происходящий в
+                                    результате их случайного движения.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">7. Перечислить агрегатные
+                              состояния вещества</button>
+                        <div class="accordion-content">
+                              <p>Агрегатные состояния вещества: твердое, жидкое, газообразное и плазма.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">8. Плазма – это</button>
+                        <div class="accordion-content">
+                              <p>Плазма – это ионизированное состояние вещества, в котором электроны отделены от атомов,
+                                    образуя смесь положительных и отрицательных частиц.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">9. Внутренняя энергия –
+                              это</button>
+                        <div class="accordion-content">
+                              <p>Внутренняя энергия – это сумма кинетической и потенциальной энергии частиц,
+                                    составляющих систему.</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">10. Внутренняя энергия формула
+                              и СИ</button>
+                        <div class="accordion-content">
+                              <p>Внутренняя энергия (U) не имеет простой формулы, так как зависит от состояния системы.
+                                    Единица измерения: Джоуль (Дж).</p>
+                        </div>
+                  </div>
+
+                  <div class="accordion">
+                        <button class="accordion-button" onclick="toggleAccordion(this)">11. Способы изменения
+                              внутренней энергии</button>
+                        <div class="accordion-content">
+                              <p>Внутренняя энергия может изменяться за счет теплопередачи и работы, совершаемой
+                                    надсистемой или самой системой.</p> </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">12. Если работа
+                                    совершается над телом, … (+формула)</button>
+                              <div class="accordion-content">
+                                    <p>Если работа совершается над телом, то внутренняя энергия системы увеличивается.
+                                          Формула: \( \Delta U = Q + W \), где \( Q \) — количество теплоты, переданное
+                                          системе, \( W \) — работа, совершаемая над системой.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">13. Если работа
+                                    совершается самим телом, … (+формула)</button>
+                              <div class="accordion-content">
+                                    <p>Если работа совершается самим телом, то внутренняя энергия системы уменьшается.
+                                          Формула: \( \Delta U = Q - W \), где \( W \) — работа, совершаемая телом.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">14. Теплообмен –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Теплообмен – это процесс передачи тепла между телами или частями одной системы,
+                                          происходящий в результате разности температур.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">15. Количество теплоты –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Количество теплоты – это энергия, передаваемая от одного тела к другому в
+                                          результате разности температур. Измеряется в Джоулях (Дж).</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">16. Теплопроводность –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Теплопроводность – это способность материала проводить тепло. Она зависит от
+                                          свойств вещества и температуры.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">17. Конвекция –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Конвекция – это процесс переноса тепла в жидкости или газе за счет движения самих
+                                          частиц среды.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">18. Излучение –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Излучение – это процесс передачи тепла в виде электромагнитных волн, не требующий
+                                          наличия среды.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">19. Первый закон
+                                    термодинамики</button>
+                              <div class="accordion-content">
+                                    <p>Первый закон термодинамики утверждает, что изменение внутренней энергии системы
+                                          равно количеству теплоты, переданному системе, минус работа, совершенная
+                                          системой.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">20. Первый закон
+                                    термодинамики (формула)</button>
+                              <div class="accordion-content">
+                                    <p>Формула первого закона термодинамики: \( \Delta U = Q - W \), где \( \Delta U \)
+                                          — изменение внутренней энергии, \( Q \) — количество теплоты, переданное
+                                          системе, \( W \) — работа, совершенная системой.</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div id="section5" class="hidden">
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">1. Как рассчитать
+                                    количество теплоты при нагревании (формула)</button>
+                              <div class="accordion-content">
+                                    <p>Количество теплоты (Q) при нагревании рассчитывается по формуле: \( Q = mc\Delta
+                                          T \), где \( m \) — масса вещества, \( c \) — удельная теплоемкость, \( \Delta
+                                          T \) — изменение температуры.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">2. Уравнение теплового
+                                    баланса (формула и определение)</button>
+                              <div class="accordion-content">
+                                    <p>Уравнение теплового баланса гласит, что сумма теплоты, полученной системой, равна
+                                          сумме теплоты, отданной системой: \( Q_{вход} = Q_{выход} \).</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">3. Формула количества
+                                    теплоты при горении топлива</button>
+                              <div class="accordion-content">
+                                    <p>Количество теплоты (Q) при горении топлива рассчитывается по формуле: \( Q = m
+                                          \cdot H \), где \( m \) — масса топлива, \( H \) — теплота сгорания.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">4. Формула количества
+                                    теплоты при плавлении/кристаллизации</button>
+                              <div class="accordion-content">
+                                    <p>Количество теплоты (Q) при плавлении или кристаллизации рассчитывается по
+                                          формуле: \( Q = m \cdot L_f \), где \( m \) — масса вещества, \( L_f \) —
+                                          удельная теплота плавления.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">5. Формулы количества
+                                    теплоты при испарении/конденсации</button>
+                              <div class="accordion-content">
+                                    <p>Количество теплоты (Q) при испарении или конденсации рассчитывается по формуле:
+                                          \( Q = m \cdot L_v \), где \( m \) — масса вещества, \( L_v \) — удельная
+                                          теплота парообразования.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">6. Плавление –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Плавление – это процесс перехода вещества из твердого состояния в жидкое при
+                                          нагревании.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">7. Кристаллизация –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Кристаллизация – это процесс перехода вещества из жидкого состояния в твердое при
+                                          охлаждении.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">8. Испарение –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Испарение – это процесс перехода вещества из жидкого состояния в газообразное при
+                                          любой температуре.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">9. Конденсация –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Конденсация – это процесс перехода вещества из газообразного состояния в жидкое.
+                                    </p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">10. Кипение –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Кипение – это процесс быстрого перехода вещества из жидкого состояния в
+                                          газообразное при достижении температуры кипения.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">11. Насыщенный пар –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Насыщенный пар – это пар, находящийся в равновесии с жидкостью при данной
+                                          температуре и давлении.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">12. Влажность воздуха –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Влажность воздуха – это количество водяного пара, содержащегося в воздухе, обычно
+                                          выражаемое в процентах.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">13. Формула для
+                                    относительной влажности воздуха</button>
+                              <div class="accordion-content">
+                                    <p>Относительная влажность (φ) рассчитывается по формуле: \( φ =
+                                          \frac{P_v}{P_{v,max}} \cdot 100\% \), где \( P_v \) — парциальное давление
+                                          водяного пара, \( P_{v,max} \) — максимальное парциальное давление водяного
+                                          пара при данной температуре.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">14. Какой прибор измеряет
+                                    относительную влажность воздуха</button>
+                              <div class="accordion-content">
+                                    <p>Прибор для измерения относительной влажности воздуха называется гигрометром.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">15. Сублимация – это (+
+                                    пример)</button>
+                              <div class="accordion-content">
+                                    <p>Сублимация – это процесс перехода вещества из твердого состояния в газообразное
+                                          без перехода в жидкое состояние. Пример: сублимация сухого льда
+                                          (CO<sub>2</sub>).</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">16. Десублимация – это
+                                    (+пример)</button>
+                              <div class="accordion-content">
+                                    <p>Десублимация – это процесс перехода вещества из газообразного состояния в твердое
+                                          без перехода в жидкое состояние. Пример: образование инея из водяного пара.
+                                    </p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">17. КПД – это</button>
+                              <div class="accordion-content">
+                                    <p>КПД (коэффициент полезного действия) – это отношение полезной работы, выполненной
+                                          машиной, к затраченной энергии.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">18. Формулы для КПД
+                                    (через работу, через количество теплоты, максимальный КПД Карно)</button>
+                              <div class="accordion-content">
+                                    <p>КПД через работу: \( \eta = \frac{A_{полезная}}{A_{затраченная}} \cdot 100\% \)
+                                    </p>
+                                    <p>КПД через количество теплоты: \( \eta = \frac{Q_{полезное}}{Q_{затраченное}}
+                                          \cdot 100\% \)</p>
+                                    <p>Максимальный КПД Карно: \( \eta_{max} = 1 - \frac{T_{холодного}}{T_{горячего}}
+                                          \), где температуры в Кельвинах.</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div id="section6" class="hidden">
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">1. Какие виды зарядов
+                                    существуют?</button>
+                              <div class="accordion-content">
+                                    <p>Существуют два вида электрических зарядов: положительный и отрицательный.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">2. Если потереть стекло о
+                                    шёлк, будет условно … заряд, а если эбонит о мех, то условно …. Заряд</button>
+                              <div class="accordion-content">
+                                    <p>Если потереть стекло о шёлк, будет условно положительный заряд, а если эбонит о
+                                          мех, то условно отрицательный заряд.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">3. Одноименные заряды…, а
+                                    разноименные…</button>
+                              <div class="accordion-content">
+                                    <p>Одноименные заряды отталкиваются, а разноименные заряды притягиваются.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">4. Электрический заряд –
+                                    это</button>
+                              <div class="accordion-content">
+                                    <p>Электрический заряд – это физическая величина, характеризующая способность тела
+                                          взаимодействовать с другими заряженными телами.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">5. Как получается
+                                    положительный заряд?</button>
+                              <div class="accordion-content">
+                                    <p>Положительный заряд получается, когда электроны покидают тело, оставляя
+                                          избыточные положительные заряды (протоны).</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">6. Как получается
+                                    отрицательный заряд?</button>
+                              <div class="accordion-content">
+                                    <p>Отрицательный заряд получается, когда тело приобретает дополнительные электроны.
+                                    </p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">7. Закон сохранения
+                                    электрического заряда (формула и формулировка)</button>
+                              <div class="accordion-content">
+                                    <p>Закон сохранения электрического заряда гласит, что в замкнутой системе суммарный
+                                          электрический заряд остается постоянным. Формула: \( Q_{вход} = Q_{выход} \).
+                                    </p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">8. Закон Кулона</button>
+                              <div class="accordion-content">
+                                    <p>Закон Кулона описывает силу взаимодействия между двумя точечными зарядами,
+                                          которая пропорциональна произведению их зарядов и обратно пропорциональна
+                                          квадрату расстояния между ними.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">9. Формула для закона
+                                    Кулона</button>
+                              <div class="accordion-content">
+                                    <p>Формула закона Кулона: \( F = k \frac{|q_1 q_2|}{r^2} \), где \( F \) — сила
+                                          взаимодействия, \( k \) — коэффициент пропорциональности (константа Кулона),
+                                          \( q_1 \) и \( q_2 \) — заряды, \( r \) — расстояние между зарядами.</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">10. Формула для
+                                    напряженности</button>
+                              <div class="accordion-content">
+                                    <p>Напряженность электрического поля (E) определяется как сила (F), действующая на
+                                          единичный положительный заряд (q): \( E = \frac{F}{q} \).</p>
+                              </div>
+                        </div>
+
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">11. В чем измеряется
+                                    напряженность в СИ?</button>
+                              <div class="accordion-content">
+                                    <p>Напряженность электрического поля измеряется в вольтах на метр (В/м).</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div id="section7" class="hidden">
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">1. Напряжение – это</button>
+                            <div class="accordion-content">
+                                <p>Напряжение (U) – это физическая величина, характеризующая разность электрических потенциалов между двумя точками в электрической цепи.</p>
+                            </div>
+                        </div>
                     
-                </div>
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">2. Формула для напряжения через работу</button>
+                            <div class="accordion-content">
+                                <p>Напряжение (U) можно рассчитать по формуле: \( U = \frac{A}{q} \), где \( A \) — работа, совершенная над зарядом \( q \).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">3. Формула для напряжения через напряженность</button>
+                            <div class="accordion-content">
+                                <p>Напряжение (U) также можно выразить через напряженность электрического поля (E): \( U = E \cdot d \), где \( d \) — расстояние между точками.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">4. В чём измеряется напряжение в СИ?</button>
+                            <div class="accordion-content">
+                                <p>Напряжение измеряется в вольтах (В).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">5. Обозначение в цепи источника тока, лампы, резистора, ключа, предохранителя, реостата, вольтметра, амперметра</button>
+                            <div class="accordion-content">
+                                <p>Обозначения:</p>
+                                <ul>
+                                    <li>Источник тока: \(\mathcal{E}\)</li>
+                                    <li>Лампа: \(\text{L}\)</li>
+                                    <li>Резистор: \(\text{R}\)</li>
+                                    <li>Ключ: \(\text{K}\)</li>
+                                    <li>Предохранитель: \(\text{F}\)</li>
+                                    <li>Реостат: \(\text{Rh}\)</li>
+                                    <li>Вольтметр: \(\text{V}\)</li>
+                                    <li>Амперметр: \(\text{A}\)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">6. Сила тока – это</button>
+                            <div class="accordion-content">
+                                <p>Сила тока (I) – это количество электрического заряда, проходящего через поперечное сечение проводника за единицу времени.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">7. Формула для силы тока</button>
+                            <div class="accordion-content">
+                                <p>Сила тока (I) рассчитывается по формуле: \( I = \frac{q}{t} \), где \( q \) — заряд, прошедший через сечение, \( t \) — время.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">8. Сила тока измеряется в СИ</button>
+                            <div class="accordion-content">
+                                <p>Сила тока измеряется в амперах (А).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">9. Вольтметр включается в цепь …</button>
+                            <div class="accordion-content">
+                                <p>Вольтметр включается параллельно к элементу цепи, напряжение которого необходимо измерить.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">10. Амперметр включается в цепь …</button>
+                            <div class="accordion-content">
+                                <p>Амперметр включается последовательно в цепь, чтобы измерить силу тока, проходящего через него.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">11. Условия для I, U, R при последовательном подключении</button>
+                            <div class="accordion-content">
+                                <p>При последовательном подключении:</p>
+                                <ul>
+                                    <li>Сила тока (I) одинакова во всех элементах: \( I = I_1 = I_2 = ... \)</li>
+                                    <li>Напряжение (U) складывается: \( U = U_1 + U_2 + ... \)</li>
+                                    <li>Общее сопротивление (R) складывается: \( R = R_1 + R_2 + ... \)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">12. Условия для I, U, R при параллельном подключении</button>
+                              <div class="accordion-content">
+                                  <p>При параллельном подключении:</p>
+                                  <ul>
+                                      <li>Сила тока (I) складывается: \( I = I_1 + I_2 + ... \)</li>
+                                      <li>Напряжение (U) одинаково во всех элементах: \( U = U_1 = U_2 = ... \)</li>
+                                      <li>Обратное общее сопротивление (R) рассчитывается по формуле: \( \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... \)</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">13. Сопротивление – это</button>
+                              <div class="accordion-content">
+                                  <p>Сопротивление (R) – это физическая величина, характеризующая способность проводника препятствовать прохождению электрического тока.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">14. Формула для сопротивления</button>
+                              <div class="accordion-content">
+                                  <p>Сопротивление (R) рассчитывается по формуле: \( R = \frac{U}{I} \), где U — напряжение, I — сила тока.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">15. Сопротивление в СИ измеряется в…</button>
+                              <div class="accordion-content">
+                                  <p>Сопротивление измеряется в омах (Ω).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">16. Закон Ома:</button>
+                              <div class="accordion-content">
+                                  <p>Закон Ома гласит, что сила тока в проводнике прямо пропорциональна напряжению и обратно пропорциональна сопротивлению: \( I = \frac{U}{R} \).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">17. Формула для Закона Ома</button>
+                              <div class="accordion-content">
+                                  <p>Формула Закона Ома: \( U = I \cdot R \), где U — напряжение, I — сила тока, R — сопротивление.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">18. Закон Джоуля-Ленца</button>
+                              <div class="accordion-content">
+                                  <p>Закон Джоуля-Ленца описывает количество теплоты, выделяющееся в проводнике при прохождении электрического тока: \( Q = I^2 R t \), где Q — количество теплоты, I — сила тока, R — сопротивление, t — время.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">19. Формулы для закона Джоуля-Ленца</button>
+                              <div class="accordion-content">
+                                  <p>Формула для количества теплоты: \( Q = I^2 R t \)</p>
+                                  <p>Также можно выразить через напряжение: \( Q = \frac{U^2}{R} t \)</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">20. Формула для электрической мощности через работу</button>
+                              <div class="accordion-content">
+                                  <p>Электрическая мощность (P) определяется как работа (A), выполненная за единицу времени (t): \( P = \frac{A}{t} \).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">21. Формулы для мощности через U, I, R</button>
+                              <div class="accordion-content">
+                                  <p>Мощность можно выразить через напряжение и силу тока: \( P = U \cdot I \)</p>
+                                  <p>Также через сопротивление: \( P = \frac{U^2}{R} \) или \( P = I^2 R \).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">22. Мощность в СИ измеряется в ….</button>
+                              <div class="accordion-content">
+                                  <p>Мощность измеряется в ваттах (Вт).</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div id="section8" class="hidden">
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">1. Формы магнитов</button>
+                            <div class="accordion-content">
+                                <p>Магниты могут иметь различные формы, включая прямоугольные, цилиндрические, дисковые и кольцевые.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">2. Полюса магнитов</button>
+                            <div class="accordion-content">
+                                <p>У каждого магнита есть два полюса: северный (N) и южный (S). Полюса магнитов всегда существуют парами.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">3. Свойства магнитов</button>
+                            <div class="accordion-content">
+                                <p>Магниты притягивают железо и другие ферромагнитные материалы, обладают магнитным полем и могут взаимодействовать с другими магнитами.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">4. Магнитное поле действует на движущиеся или неподвижные заряды?</button>
+                            <div class="accordion-content">
+                                <p>Магнитное поле действует только на движущиеся заряды. Неподвижные заряды не испытывают силы в магнитном поле.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">5. От какого полюса к какому направлено магнитное поле? Нарисуйте</button>
+                            <div class="accordion-content">
+                                <p>Магнитное поле направлено от северного полюса (N) к южному полюсу (S). (Нарисуйте стрелку от N к S).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">6. Вектор магнитной индукции – это</button>
+                            <div class="accordion-content">
+                                <p>Вектор магнитной индукции (B) — это векторная величина, характеризующая магнитное поле. Он показывает направление и величину магнитного поля.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">7. Единицы измерения вектора магнитной индукции</button>
+                            <div class="accordion-content">
+                                <p>Вектор магнитной индукции измеряется в теслах (Т).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">8. Правило правой руки для прямого проводника:</button>
+                            <div class="accordion-content">
+                                <p>Если правую руку расположить так, чтобы большой палец указывал в направлении тока, то остальные пальцы укажут направление магнитного поля вокруг проводника.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">9. Правило правой руки для кругового тока:</button>
+                            <div class="accordion-content">
+                                <p>Если обхватить проводник, по которому течет ток, правой рукой, то большой палец укажет направление тока, а остальные пальцы — направление магнитного поля.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">10. Правило правой руки для катушки с током:</button>
+                            <div class="accordion-content">
+                                <p>Если обхватить катушку правой рукой, то большой палец укажет направление тока, а остальные пальцы — направление магнитного поля внутри катушки.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">11. Сила Ампера – это</button>
+                            <div class="accordion-content">
+                                <p>Сила Ампера — это сила, действующая на проводник с током в магнитном поле.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">12. Формула для силы Ампера</button>
+                            <div class="accordion-content">
+                                <p>Формула силы Ампера: \( F = I \cdot L \cdot B \cdot \sin(\theta) \), где \( F \) — сила, \( I \) — ток, \( L \) — длина проводника, \( B \) — магнитная индукция, \( \theta \) — угол между направлением тока и магнитным полем.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">13. Единица измерения силы Ампера</button>
+                            <div class="accordion-content">
+                                <p>Сила Ампера измеряется в ньютонах (Н).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">14. С помощью какого правила определяется сила Ампера?</button>
+                            <div class="accordion-content">
+                                <p>Сила Ампера определяется с помощью правила левой руки.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">15. Правило левой руки (Сила Ампера):</button>
+                            <div class="accordion-content">
+                                <p>Если левую руку расположить так, чтобы большой палец указывал в направлении тока, а указательный — в направлении магнитного поля, то средний палец укажет направление силы Ампера.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">16. Сила Лоренца – это</button>
+                            <div class="accordion-content">
+                                <p>Сила Лоренца — это сила, действующая на движущийся заряд в магнитном поле.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">17. Формула для нахождения силы Лоренца</button>
+                            <div class="accordion-content">
+                                <p>Формула силы Лоренца: \( F = q \cdot v \cdot B \cdot \sin(\theta) \), где \( F \) — сила, \( q \) — заряд, \( v \) — скорость заряда, \( B \) — магнитная индукция, \( \theta \) — угол между вектором скорости и магнитным полем.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">18. Правило левой руки (Сила Лоренца):</button>
+                            <div class="accordion-content">
+                                <p>Если левую руку расположить так, чтобы большой палец указывал в направлении скорости заряда, а указательный — в направлении магнитного поля, то средний палец укажет направление силы Лоренца.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">19. В чём принципиальное отличие силы Ампера и силы Лоренца?</button>
+                            <div class="accordion-content">
+                                <p>Сила Ампера действует на проводник с током в магнитном поле, а сила Лоренца — на движущийся заряд в магнитном поле.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">20. Закон электромагнитной индукции Фарадея</button>
+                            <div class="accordion-content">
+                                <p>Закон Фарадея гласит, что ЭДС индукции в замкнутом контуре пропорциональна скорости изменения магнитного потока через этот контур.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">21. Формула магнитного потока</button>
+                            <div class="accordion-content">
+                                <p>Формула магнитного потока: \( \Phi = B \cdot S \cdot \cos(\theta) \), где \( \Phi \) — магнитный поток, \( B \) — магнитная индукция, \( S \) — площадь, \( \theta \) — угол между нормалью к поверхности и направлением магнитного поля.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">22. Единицы измерения магнитного потока</button>
+                            <div class="accordion-content">
+                                <p>Магнитный поток измеряется в веберах (Вб).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">23. Правило Ленца</button>
+                            <div class="accordion-content">
+                                <p>Правило Ленца гласит, что направление индукционного тока всегда таково, что он создает магнитное поле, противодействующее изменению магнитного потока, вызвавшему его.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="section9" class="hidden">
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">1. Оптика – это</button>
+                            <div class="accordion-content">
+                                <p>Оптика — это раздел физики, изучающий свет и его взаимодействие с веществом, включая явления отражения, преломления и дифракции.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">2. Электромагнитные волны – это</button>
+                            <div class="accordion-content">
+                                <p>Электромагнитные волны — это волны, состоящие из переменных электрических и магнитных полей, которые распространяются в пространстве.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">3. Виды, свойства э/м волн</button>
+                            <div class="accordion-content">
+                                <p>Виды электромагнитных волн: радиоволны, инфракрасные, видимый свет, ультрафиолетовые, рентгеновские и гамма-лучи.</p>
+                                <p>Свойства: могут распространяться в вакууме, имеют скорость света, могут отражаться, преломляться и интерферировать.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">4. Свет - это</button>
+                            <div class="accordion-content">
+                                <p>Свет — это форма электромагнитного излучения, воспринимаемая человеческим глазом, имеющая длину волны в диапазоне от 400 до 700 нм.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">5. Закон прямолинейного распространения света (чертёж, формула, формулировка)</button>
+                            <div class="accordion-content">
+                                <p>Закон прямолинейного распространения света гласит, что свет распространяется в однородной среде по прямым линиям.</p>
+                                <p>Формула: нет конкретной формулы, но можно использовать уравнение для прямолинейного движения: \( s = vt \), где \( s \) — расстояние, \( v \) — скорость света, \( t \) — время.</p>
+                                
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">6. Закон отражения света (чертёж, формула, формулировка)</button>
+                            <div class="accordion-content">
+                                <p>Закон отражения света гласит, что угол падения равен углу отражения.</p>
+                                <p>Формула: \( \angle i = \angle r \), где \( \angle i \) — угол падения, \( \angle r \) — угол отражения.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">7. Закон преломления света (чертёж, формула, формулировка)</button>
+                            <div class="accordion-content">
+                                <p>Закон преломления света (закон Снеллиуса) гласит, что отношение синуса угла падения к синусу угла преломления равно отношению скоростей света в двух средах.</p>
+                                <p>Формула: \( \frac{\sin(\angle i)}{\sin(\angle r)} = \frac{v_1}{v_2} = \frac{n_2}{n_1} \), где \( n \) — показатель преломления.</p>
+                                <p>Чертёж: нарисуйте падающий луч, нормаль и преломлённый луч, показывая углы.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">8. Характеристики изображения в плоском зеркале</button>
+                            <div class="accordion-content">
+                                <p>Изображение в плоском зеркале: прямое, равное по размеру, виртуальное и расположено на одинаковом расстоянии от зеркала, как и объект.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">9. Линза – это</button>
+                            <div class="accordion-content">
+                                <p>Линза — это оптический элемент, состоящий из прозрачного материала, который преломляет световые лучи.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                            <button class="accordion-button" onclick="toggleAccordion(this)">10. Виды линз и их схематичное изображение</button>
+                            <div class="accordion-content">
+                                <p>Виды линз:</p>
+                                <ul>
+                                    <li>Собирающая линза (выпуклая): утолщена в центре.</li>
+                                    <li>Рассекающая линза (вогнутая): утончена в центре.</li>
+                                </ul>
+                                <p>Схематичное изображение: нарисуйте обе линзы с показом их формы и направления лучей.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">11. Формула тонкой линзы</button>
+                              <div class="accordion-content">
+                                  <p>Формула тонкой линзы: \( \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} \), где \( f \) — фокусное расстояние, \( d_o \) — расстояние от объекта до линзы, \( d_i \) — расстояние от линзы до изображения.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">12. Оптическая сила линзы</button>
+                              <div class="accordion-content">
+                                  <p>Оптическая сила линзы (D) определяется как: \( D = \frac{1}{f} \), где \( f \) — фокусное расстояние в метрах. Измеряется в диоптриях (дптр).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">13. Характеристики линзы</button>
+                              <div class="accordion-content">
+                                  <p>Характеристики линзы включают фокусное расстояние, оптическую силу, тип (выпуклая или вогнутая), а также качество изображения (реальное или виртуальное, прямое или перевернутое).</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">14. Свойства света</button>
+                              <div class="accordion-content">
+                                  <p>Свет обладает свойствами: прямолинейного распространения, отражения, преломления, дифракции и интерференции.</p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">15. Как строить изображения в линзах?</button>
+                              <div class="accordion-content">
+                                  <p>Для построения изображения в линзах необходимо использовать основные правила: 
+                                      1. Луч, проходящий через фокус, после преломления идет параллельно главной оси.
+                                      2. Луч, проходящий параллельно главной оси, после преломления проходит через фокус.
+                                      3. Луч, проходящий через центр линзы, продолжает двигаться в том же направлении.
+                                  </p>
+                              </div>
+                          </div>
+                      
+                          <div class="accordion">
+                              <button class="accordion-button" onclick="toggleAccordion(this)">16. Глаз как оптическая система</button>
+                              <div class="accordion-content">
+                                  <p>Глаз человека является сложной оптической системой, состоящей из роговицы, хрусталика и стекловидного тела. Он фокусирует свет на сетчатке, где происходит восприятие изображения.</p>
+                              </div>
+                          </div>
+                      
+
+                        <div class="image-gallery">
+                          <h2>Схемы которые мне не понять🫠🫠🫠</h2>
+                          <div class="image-container">
+                              <img src="img/image1.png" alt="фото1" class="gallery-image">
+                              <img src="img/image2.png" alt="фото2" class="gallery-image">
+                          </div>
+                        </div>
+                        </div>
 
 
-      </div>
+
+            </div>
 
 
 
 
-      <script>
-            function toggleAccordion(button) {
-                  // Закрыть все открытые аккордеоны
-                  const contents = document.querySelectorAll('.accordion-content');
-                  contents.forEach(content => {
-                        content.style.display = 'none';
-                  });
-                  // Открыть или закрыть текущий аккордеон
-                  const content = button.nextElementSibling;
-                  if (content.style.display === 'block') {
-                        content.style.display = 'none';
-                  } else {
-                        content.style.display = 'block';
+            <script>
+                  function toggleAccordion(button) {
+                        // Закрыть все открытые аккордеоны
+                        const contents = document.querySelectorAll('.accordion-content');
+                        contents.forEach(content => {
+                              content.style.display = 'none';
+                        });
+                        // Открыть или закрыть текущий аккордеон
+                        const content = button.nextElementSibling;
+                        if (content.style.display === 'block') {
+                              content.style.display = 'none';
+                        } else {
+                              content.style.display = 'block';
+                        }
                   }
-            }
-      </script>
+            </script>
 
-      <script>
-            function showSection(sectionId) {
-                  const sections = document.querySelectorAll('.container > div');
-                  sections.forEach(section => {
-                        section.classList.add('hidden');
-                  });
-                  document.getElementById(sectionId).classList.remove('hidden');
-            }
-      </script>
+            <script>
+                  function showSection(sectionId) {
+                        const sections = document.querySelectorAll('.container > div');
+                        sections.forEach(section => {
+                              section.classList.add('hidden');
+                        });
+                        document.getElementById(sectionId).classList.remove('hidden');
+                  }
+            </script>
 
 </body>
 
