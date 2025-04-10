@@ -191,8 +191,9 @@
 <body>
 
 <div class="overlay">
-        <div class="message">Ведутся технические работы</div><br>
-<div class="timer" id="timer">10:00:00</div>
+        <div class="message">Ведутся технические работы</div>
+<br><br><br>
+<div class="timer" id="timer">00:00:00</div>
     </div>
 
       <nav>
@@ -1861,15 +1862,16 @@
                         document.getElementById(sectionId).classList.remove('hidden');
                   }
             </script>
+ 
  <script>
-        const duration = 10 * 60 * 60 * 1000;
-        const endTime = new Date(Date.now() + duration); 
+        
+        const endDate = new Date('2025-4-11T14:30:00'); 
 
         const timerElement = document.getElementById('timer');
 
         const countdown = setInterval(() => {
             const now = new Date();
-            const timeLeft = endTime - now; 
+            const timeLeft = endDate - now; 
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
@@ -1881,11 +1883,12 @@
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            
+           
             const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             timerElement.textContent = formattedTime;
         }, 1000);
-</script>
+    </script>
+
 </body>
 
 </html>
