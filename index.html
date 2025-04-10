@@ -25,14 +25,19 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
+            text-align: center;
         }
         .message {
             font-size: 24px;
-            color: black ;
-            text-align: center;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .date {
+            font-size: 20px;
+            color: black;
             margin-bottom: 20px;
         }
-.timer {
+        .timer {
             font-size: 20px;
             color: black;
         }
@@ -194,8 +199,8 @@
 
 <div class="overlay">
         <div class="message">Ведутся технические работы</div>
-<br><br><br>
-<div class="timer" id="timer">00:00:00</div>
+        <div class="date">Сайт заработает 11 апреля в 14:30:00</div>
+        <div class="timer" id="timer">00:00:00:00</div>
     </div>
 
       <nav>
@@ -1873,20 +1878,21 @@
 
         const countdown = setInterval(() => {
             const now = new Date();
-            const timeLeft = endDate - now; 
+            const timeLeft = endDate - now; // Оставшееся время в миллисекундах
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                document.querySelector('.overlay').style.display = 'none'; 
+                document.querySelector('.overlay').style.display = 'none'; // Скрываем оверлей
                 return;
             }
 
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-           
-            const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            // Форматируем время
+            const formattedTime = `${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             timerElement.textContent = formattedTime;
         }, 1000);
     </script>
