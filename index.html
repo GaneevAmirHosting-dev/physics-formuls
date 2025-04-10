@@ -23,12 +23,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999; /* Убедитесь, что это значение выше, чем у других элементов на странице */
+            z-index: 9999; 
         }
         .message {
             font-size: 24px;
             color: black ;
             text-align: center;
+        }
+.timer {
+            font-size: 20px;
+            color: black;
         }
 
             .accordion {
@@ -188,6 +192,7 @@
 
 <div class="overlay">
         <div class="message">Ведутся технические работы</div>
+<div class="timer" id="timer">10:00:00</div>
     </div>
 
       <nav>
@@ -1856,6 +1861,26 @@
                         document.getElementById(sectionId).classList.remove('hidden');
                   }
             </script>
+<script>
+        let timeLeft = 36000; 
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+
+           
+            const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            timerElement.textContent = formattedTime;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                document.querySelector('.overlay').style.display = 'none'; 
+            }
+            timeLeft--;
+        }, 1000);
+    </script>
 
 </body>
 
