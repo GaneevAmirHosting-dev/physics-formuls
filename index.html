@@ -1878,11 +1878,11 @@
 
         const countdown = setInterval(() => {
             const now = new Date();
-            const timeLeft = endDate - now; // Оставшееся время в миллисекундах
+            const timeLeft = endDate - now; 
 
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                document.querySelector('.overlay').style.display = 'none'; // Скрываем оверлей
+                document.querySelector('.overlay').style.display = 'none'; 
                 return;
             }
 
@@ -1891,10 +1891,10 @@
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            // Форматируем время
+        
             const formattedTime = `${String(days).padStart(2, '0')}:${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
             timerElement.textContent = formattedTime;
-        }, 1000);
+        }, 1);
     </script>
 
 </body>
